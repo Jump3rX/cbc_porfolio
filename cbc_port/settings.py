@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-483wv#_s!h6s59nh)xmigjq-^0v@hwx^-wcn^*bp_s469z_=y+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cbc-porfolio.onrender.com/']
+ALLOWED_HOSTS = ['cbc-porfolio.onrender.com']
 
 
 # Application definition
