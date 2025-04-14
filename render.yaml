@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dons-journey
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn cbc_port.wsgi:application
+    staticPublishPath: static
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: cbc_port.settings
+      - key: SECRET_KEY
+        value: your-secret-key
+      - key: ALLOWED_HOSTS
+        value: dons-journey.onrender.com
